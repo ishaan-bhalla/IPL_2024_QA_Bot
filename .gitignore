@@ -1,3 +1,5 @@
 objectbox
 .env
 .DS_Store
+venv
+.vscode
