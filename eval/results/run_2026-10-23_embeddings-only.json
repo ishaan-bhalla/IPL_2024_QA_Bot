@@ -1,0 +1,528 @@
+{
+  "summary": {
+    "date": "2026-10-23",
+    "snapshot": "https://en.wikipedia.org/w/index.php?title=2024_Indian_Premier_League&oldid=1381156513",
+    "model": "openai/gpt-oss-20b",
+    "top_k": 4,
+    "questions": 28,
+    "errors": 0,
+    "retrieval_hit_at_k": "15/22",
+    "answer_accuracy": "15/22",
+    "table_question_accuracy": "1/6",
+    "false_refusals": "6/22",
+    "out_of_scope_declined": "6/6",
+    "llm_ms_p50": 8590,
+    "llm_ms_p95": 13053,
+    "retrieval_ms_p50": 51,
+    "avg_input_tokens": 1027,
+    "avg_output_tokens": 214,
+    "retrieval": "embeddings only (before hybrid search)"
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "type": "fact",
+      "answer": "Kolkata Knight Riders won the 2024 Indian Premier League title, defeating Sunrisers Hyderabad by 8 wickets in the final. This victory gave them their third IPL championship.",
+      "found": true,
+      "retrieved_sections": [
+        "Summary",
+        "Final",
+        "Marketing",
+        "Qualifier 1"
+      ],
+      "llm_ms": 2107,
+      "retrieval_ms": 13,
+      "input_tokens": 892,
+      "output_tokens": 118,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q02",
+      "type": "fact",
+      "answer": "I couldn't find that information in the article.",
+      "found": false,
+      "retrieved_sections": [
+        "Fixtures"
+      ],
+      "llm_ms": 639,
+      "retrieval_ms": 21,
+      "input_tokens": 1424,
+      "output_tokens": 196,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": false,
+      "correct": false
+    },
+    {
+      "id": "q03",
+      "type": "fact",
+      "answer": "Four teams qualified for the playoffs after the group stage.",
+      "found": true,
+      "retrieved_sections": [
+        "Format",
+        "Bracket",
+        "Match summary",
+        "Points table"
+      ],
+      "llm_ms": 863,
+      "retrieval_ms": 8,
+      "input_tokens": 1501,
+      "output_tokens": 96,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q04",
+      "type": "fact",
+      "answer": "Bowlers were allowed to bowl **two bouncers per over** under the new rule in 2024.",
+      "found": true,
+      "retrieved_sections": [
+        "Rule changes",
+        "Qualifier 1",
+        "Qualifier 2",
+        "Summary"
+      ],
+      "llm_ms": 631,
+      "retrieval_ms": 7,
+      "input_tokens": 737,
+      "output_tokens": 127,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q05",
+      "type": "fact",
+      "answer": "There were concerns that the 2024 IPL might be moved abroad because of potential inadequate security amid a clash with the 2024 Lok\u202fSabha elections.",
+      "found": true,
+      "retrieved_sections": [
+        "Summary",
+        "Schedule",
+        "Marketing",
+        "Broadcasting"
+      ],
+      "llm_ms": 883,
+      "retrieval_ms": 7,
+      "input_tokens": 738,
+      "output_tokens": 130,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q06",
+      "type": "fact",
+      "answer": "The Tata Group paid \u20b92,500\u202fcrore (about US$260\u202fmillion) to renew the IPL title sponsorship for the 2024\u201128 period.",
+      "found": true,
+      "retrieved_sections": [
+        "Marketing",
+        "Personnel changes",
+        "Broadcasting",
+        "Summary"
+      ],
+      "llm_ms": 699,
+      "retrieval_ms": 5,
+      "input_tokens": 837,
+      "output_tokens": 155,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q07",
+      "type": "fact",
+      "answer": "The 2024 IPL was streamed online by Viacom18 through its JioCinema platform.",
+      "found": true,
+      "retrieved_sections": [
+        "Broadcasting",
+        "Summary",
+        "Marketing",
+        "Personnel changes"
+      ],
+      "llm_ms": 393,
+      "retrieval_ms": 6,
+      "input_tokens": 826,
+      "output_tokens": 89,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q08",
+      "type": "table",
+      "answer": "Shreyas\u202fIyer captained Sunrisers Hyderabad in the 2024 Indian Premier League.",
+      "found": true,
+      "retrieved_sections": [
+        "Qualifier 2",
+        "Qualifier 1",
+        "Final",
+        "Summary"
+      ],
+      "llm_ms": 4822,
+      "retrieval_ms": 14,
+      "input_tokens": 942,
+      "output_tokens": 197,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": false,
+      "correct": false
+    },
+    {
+      "id": "q09",
+      "type": "fact",
+      "answer": "The 2024 IPL player auction was held at the Coca\u2011Cola Arena in Dubai, United Arab Emirates, on 19\u202fDecember\u202f2023.",
+      "found": true,
+      "retrieved_sections": [
+        "Personnel changes",
+        "Broadcasting",
+        "Summary",
+        "Marketing"
+      ],
+      "llm_ms": 7767,
+      "retrieval_ms": 70,
+      "input_tokens": 828,
+      "output_tokens": 115,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q10",
+      "type": "fact",
+      "answer": "Kolkata Knight Riders bought Mitchell Starc for \u20b9\u202f24.75\u202fcrore (about US$\u202f2.6\u202fmillion) at the 2024 IPL auction.",
+      "found": true,
+      "retrieved_sections": [
+        "Personnel changes",
+        "End of season awards",
+        "Fixtures",
+        "Qualifier 1"
+      ],
+      "llm_ms": 7727,
+      "retrieval_ms": 255,
+      "input_tokens": 1188,
+      "output_tokens": 132,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q11",
+      "type": "fact",
+      "answer": "Delhi Capitals played their first two home games at the ACA\u2011VDCA Cricket Stadium in Visakhapatnam because the Arun\u202fJaitley Stadium in Delhi was unavailable immediately after hosting the 2024 Women\u2019s Premier League.",
+      "found": true,
+      "retrieved_sections": [
+        "Venues",
+        "Fixtures"
+      ],
+      "llm_ms": 10556,
+      "retrieval_ms": 77,
+      "input_tokens": 1319,
+      "output_tokens": 193,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q12",
+      "type": "table",
+      "answer": "The Narendra Modi Stadium in Ahmedabad has a capacity of 132,000 spectators.",
+      "found": true,
+      "retrieved_sections": [
+        "Venues",
+        "Schedule",
+        "Fixtures"
+      ],
+      "llm_ms": 9719,
+      "retrieval_ms": 52,
+      "input_tokens": 1074,
+      "output_tokens": 195,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q13",
+      "type": "fact",
+      "answer": "Sonu\u202fNigam sang \u201cVande\u202fMataram\u201d at the IPL\u202f2024 opening ceremony.",
+      "found": true,
+      "retrieved_sections": [
+        "Opening ceremony",
+        "Qualifier 2",
+        "Qualifier 1",
+        "Summary"
+      ],
+      "llm_ms": 8590,
+      "retrieval_ms": 86,
+      "input_tokens": 903,
+      "output_tokens": 93,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q14",
+      "type": "table",
+      "answer": "I couldn't find the number of points Kolkata Knight Riders finished the league stage with in the provided passages.",
+      "found": false,
+      "retrieved_sections": [
+        "Fixtures"
+      ],
+      "llm_ms": 9966,
+      "retrieval_ms": 57,
+      "input_tokens": 1165,
+      "output_tokens": 366,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": false,
+      "correct": false
+    },
+    {
+      "id": "q15",
+      "type": "table",
+      "answer": "I couldn\u2019t find the Mumbai Indians\u2019 final position in the IPL 2024 points table in the provided passages.",
+      "found": false,
+      "retrieved_sections": [
+        "Summary",
+        "Fixtures"
+      ],
+      "llm_ms": 12829,
+      "retrieval_ms": 59,
+      "input_tokens": 1217,
+      "output_tokens": 148,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": false,
+      "correct": false
+    },
+    {
+      "id": "q16",
+      "type": "fact",
+      "answer": "Sunrisers Hyderabad posted a record 287 runs against Royal Challengers Bengaluru on 15\u202fApril.",
+      "found": true,
+      "retrieved_sections": [
+        "Match summary",
+        "Qualifier 2",
+        "Fixtures"
+      ],
+      "llm_ms": 7091,
+      "retrieval_ms": 83,
+      "input_tokens": 1018,
+      "output_tokens": 450,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q17",
+      "type": "fact",
+      "answer": "Mitchell Starc was named player of the match in Qualifier\u202f1.",
+      "found": true,
+      "retrieved_sections": [
+        "Fixtures",
+        "Qualifier 1",
+        "Qualifier 2"
+      ],
+      "llm_ms": 10427,
+      "retrieval_ms": 234,
+      "input_tokens": 879,
+      "output_tokens": 85,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q18",
+      "type": "fact",
+      "answer": "The player of the match in the Eliminator between Rajasthan Royals and Royal Challengers Bengaluru was **Ravichandran Ashwin**.",
+      "found": true,
+      "retrieved_sections": [
+        "Eliminator",
+        "Fixtures"
+      ],
+      "llm_ms": 10762,
+      "retrieval_ms": 51,
+      "input_tokens": 1273,
+      "output_tokens": 106,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q19",
+      "type": "fact",
+      "answer": "Sunrisers Hyderabad won Qualifier\u202f2 by 36 runs.",
+      "found": true,
+      "retrieved_sections": [
+        "Qualifier 2",
+        "Match summary",
+        "Qualifier 1",
+        "Fixtures"
+      ],
+      "llm_ms": 5725,
+      "retrieval_ms": 40,
+      "input_tokens": 647,
+      "output_tokens": 136,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": true,
+      "correct": true
+    },
+    {
+      "id": "q20",
+      "type": "fact",
+      "answer": "I couldn\u2019t find the number of balls remaining when KKR completed their chase in the 2024 final in the passages provided.",
+      "found": false,
+      "retrieved_sections": [
+        "Fixtures"
+      ],
+      "llm_ms": 13053,
+      "retrieval_ms": 50,
+      "input_tokens": 1418,
+      "output_tokens": 1306,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": false,
+      "correct": false
+    },
+    {
+      "id": "q21",
+      "type": "table",
+      "answer": "I couldn't find the second\u2011highest run scorer in the provided passages.",
+      "found": false,
+      "retrieved_sections": [
+        "Summary",
+        "Personnel changes",
+        "Final",
+        "Fixtures"
+      ],
+      "llm_ms": 10939,
+      "retrieval_ms": 53,
+      "input_tokens": 1071,
+      "output_tokens": 181,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": false,
+      "correct": false
+    },
+    {
+      "id": "q22",
+      "type": "table",
+      "answer": "I couldn't find the Emerging Player of the Season award winner in the provided passages.",
+      "found": false,
+      "retrieved_sections": [
+        "Summary",
+        "Personnel changes",
+        "Broadcasting",
+        "Qualifier 1"
+      ],
+      "llm_ms": 10327,
+      "retrieval_ms": 53,
+      "input_tokens": 880,
+      "output_tokens": 209,
+      "model": "openai/gpt-oss-20b",
+      "retrieval_hit": false,
+      "correct": false
+    },
+    {
+      "id": "o01",
+      "type": "out_of_scope",
+      "answer": "I couldn\u2019t find the answer in the article.",
+      "found": false,
+      "retrieved_sections": [
+        "Summary",
+        "Background",
+        "Fixtures"
+      ],
+      "llm_ms": 11586,
+      "retrieval_ms": 54,
+      "input_tokens": 871,
+      "output_tokens": 170,
+      "model": "openai/gpt-oss-20b",
+      "correct": true
+    },
+    {
+      "id": "o02",
+      "type": "out_of_scope",
+      "answer": "I couldn't find the answer in the article.",
+      "found": false,
+      "retrieved_sections": [
+        "Summary",
+        "Final",
+        "Qualifier 1",
+        "Qualifier 2"
+      ],
+      "llm_ms": 1173,
+      "retrieval_ms": 63,
+      "input_tokens": 940,
+      "output_tokens": 163,
+      "model": "openai/gpt-oss-20b",
+      "correct": true
+    },
+    {
+      "id": "o03",
+      "type": "out_of_scope",
+      "answer": "I couldn't find that information in the article.",
+      "found": false,
+      "retrieved_sections": [
+        "Personnel changes",
+        "Broadcasting",
+        "End of season awards",
+        "Marketing"
+      ],
+      "llm_ms": 15822,
+      "retrieval_ms": 48,
+      "input_tokens": 956,
+      "output_tokens": 202,
+      "model": "openai/gpt-oss-20b",
+      "correct": true
+    },
+    {
+      "id": "o04",
+      "type": "out_of_scope",
+      "answer": "I couldn't find the answer in the article.",
+      "found": false,
+      "retrieved_sections": [
+        "Summary",
+        "Fixtures"
+      ],
+      "llm_ms": 9786,
+      "retrieval_ms": 51,
+      "input_tokens": 1181,
+      "output_tokens": 142,
+      "model": "openai/gpt-oss-20b",
+      "correct": true
+    },
+    {
+      "id": "o05",
+      "type": "out_of_scope",
+      "answer": "I couldn\u2019t find the answer in the article.",
+      "found": false,
+      "retrieved_sections": [
+        "Background",
+        "Summary",
+        "Match summary",
+        "Marketing"
+      ],
+      "llm_ms": 724,
+      "retrieval_ms": 50,
+      "input_tokens": 1083,
+      "output_tokens": 228,
+      "model": "openai/gpt-oss-20b",
+      "correct": true
+    },
+    {
+      "id": "o06",
+      "type": "out_of_scope",
+      "answer": "I couldn't find the information about the 2025 captain of Kolkata Knight Riders in the provided passages.",
+      "found": false,
+      "retrieved_sections": [
+        "Summary",
+        "Teams",
+        "Fixtures",
+        "Format"
+      ],
+      "llm_ms": 8718,
+      "retrieval_ms": 17,
+      "input_tokens": 950,
+      "output_tokens": 265,
+      "model": "openai/gpt-oss-20b",
+      "correct": true
+    }
+  ]
+}

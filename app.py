@@ -1,55 +1,21 @@
 import streamlit as st
-import os
-from dotenv import load_dotenv
-from langchain_community.document_loaders import WebBaseLoader
-from langchain_objectbox.vectorstores import ObjectBox
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
-from langchain_openai import ChatOpenAI
-from langchain.chains import RetrievalQA
-from langchain import hub
-import pprint
 
-# Load environment variables
-load_dotenv()
-os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
+from rag import answer_with_stats, get_vector_store, section_link
 
 # Streamlit UI setup
 st.title("🏏2024 IPL Information and Q&A")
 st.write("""
-This application loads data from the Wikipedia page about the 2024 Indian Premier League (IPL) 
-and allows you to ask questions about it. Ask your queries about IPL - GPT will answer!
+This application answers questions about the 2024 Indian Premier League (IPL) from a saved copy of its
+Wikipedia page, and shows the article sections each answer came from.
 """)
 
-# Load data from Wikipedia
+
 @st.cache_resource
-def load_data():
-    loader = WebBaseLoader("https://en.wikipedia.org/wiki/2024_Indian_Premier_League")
-    return loader.load()
+def load_index():
+    return get_vector_store()
 
-data = load_data()
 
-# Split documents
-text_splitter = RecursiveCharacterTextSplitter()
-documents = text_splitter.split_documents(data)
-
-# Create vector store
-@st.cache_resource
-def create_vector_store(_documents):
-    return ObjectBox.from_documents(_documents, OpenAIEmbeddings(), embedding_dimensions=768)
-
-vector = create_vector_store(documents)
-
-# Initialize the language model
-llm = ChatOpenAI(model="gpt-4o")  # Using GPT-4o
-prompt = hub.pull("rlm/rag-prompt")
-
-# Create QA chain
-qa_chain = RetrievalQA.from_chain_type(
-    llm,
-    retriever=vector.as_retriever(),
-    chain_type_kwargs={"prompt": prompt}
-)
+load_index()
 
 with st.form(key='question_form', clear_on_submit=True):
     question = st.text_area(
@@ -62,9 +28,20 @@ with st.form(key='question_form', clear_on_submit=True):
 # Process the question and display the answer
 if submit_button:
     if question:
-        result = qa_chain({"query": question})
-        pp = pprint.PrettyPrinter(indent=5)
-        st.write("### Answer:")
-        st.write(result["result"])
+        try:
+            with st.spinner("Searching the article..."):
+                result = answer_with_stats(question)
+        except Exception as e:
+            # The model (and its fallback) failed after retries; keep the detail for the log.
+            print(f"Answer failed: {e!r}")
+            st.error("The language model is busy or unavailable right now. Please try again in a minute.")
+        else:
+            st.write("### Answer:")
+            st.write(result["answer"])
+            if result["sections"]:
+                st.caption("Sources (Wikipedia sections): " + " · ".join(
+                    f"[{s}]({section_link(s)})" for s in result["sections"]))
+            st.caption(f"{result['model']} · {result['llm_ms'] / 1000:.1f} s · "
+                       f"{result['input_tokens']} in / {result['output_tokens']} out tokens")
     else:
         st.write("Please enter a question.")
